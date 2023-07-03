@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: helvetica;
+}
+
+.login-screen-header {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.login-screen-user-card {
+  padding: 8px;
+  border: 2px solid #ededed;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.login-screen-user-card:hover {
+  background-color: #ededed;
+}

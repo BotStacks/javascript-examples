@@ -1,0 +1,78 @@
+{
+  "name": "uikit-react-barebones",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/uikit-react-barebones/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/uikit-react-barebones"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "uikit-react-barebones:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "uikit-react-barebones:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "uikit-react-barebones:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "uikit-react-barebones:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "uikit-react-barebones:build:development"
+        },
+        "production": {
+          "buildTarget": "uikit-react-barebones:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/apps/uikit-react-barebones"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/uikit-react-barebones"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/uikit-react-barebones/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "uikit-react-barebones:build"
+      }
+    }
+  },
+  "tags": []
+}

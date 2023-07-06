@@ -5,9 +5,9 @@
   "scripts": {},
   "private": true,
   "dependencies": {
-    "@inappchat/chat-common": "latest",
-    "@inappchat/chat-ui-react": "latest",
-    "@inappchat/chat-sdk": "latest",
+    "@inappchat/chat-common": "0.1.0",
+    "@inappchat/chat-ui-react": "0.1.0",
+    "@inappchat/chat-sdk": "0.1.0",
     "@swc/helpers": "~0.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"

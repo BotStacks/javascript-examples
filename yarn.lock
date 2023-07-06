@@ -1419,10 +1419,10 @@
     secure-ls "^1.2.6"
     uuid "^9.0.0"
 
-"@inappchat/chat-ui-react@latest":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@inappchat/chat-ui-react/-/chat-ui-react-0.0.3.tgz#9874d25d5d74502ab6f7d4b24f78a43593dbdd34"
-  integrity sha512-ahMcN/nSEua4l+yOn9iipBJ95ZPyNXSbQ82ri14xBTITudst/UMRzLK0NkOWqllXXuAePlenYfXW9CCaxCqzFA==
+"@inappchat/chat-ui-react@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@inappchat/chat-ui-react/-/chat-ui-react-0.0.4.tgz#cdb0f6a557a706e454549e26ee92a3bf65f626d3"
+  integrity sha512-zOMJLbJ4YhnilaWzCgm0ZZHszg4FtXt4uM2zhLVdPVFWbRN+7JOGom+UyDQVIbk47fppxJdGwie8lGrKdZV6Hg==
   dependencies:
     "@fluentui/react-icons" "^2.0.204"
     "@inappchat/chat-common" "workspace:^"

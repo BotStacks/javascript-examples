@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { InAppChat, InAppChatUI, useChat } from '@inappchat/chat-ui-react';
-import '@inappchat/chat-ui-react/style';
+import { useEffect, useState } from 'react';
+import { InAppChat, InAppChatUI, useChat } from '@inappchat/react';
+import 'node_modules/@inappchat/react/style.css';
 
 const API_KEY = import.meta.env.VITE_IAC_API_KEY || '';
 

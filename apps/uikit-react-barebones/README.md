@@ -1,6 +1,6 @@
 # React UIKit barebones example
 
-This example uses the `@inappchat/chat-ui-react` package. In it you can see a simple demo using pre-defined users.
+This example uses the `@inappchat/react` package. In it you can see a simple demo using pre-defined users.
 To start, run
 
 ```

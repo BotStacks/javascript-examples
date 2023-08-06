@@ -1372,19 +1372,19 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@inappchat/common@0.0.1":
+"@inappchat/common@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@inappchat/common/-/common-0.1.0.tgz#6bbc72682fde46955de5461b1b5d908554cdb84a"
   integrity sha512-wZgFIgZoWSxCPzVJ46KpCJ7NW5h+6ohmf6gmjlnChf8b41mHpQE2VUTfXBxxsZ5kB+BY9Lur9952KQmsXptajg==
 
-"@inappchat/react@1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@inappchat/react/-/react-1.0.0-beta.0.tgz#addf0c342309d95119a932c9f98e8117fd54653f"
-  integrity sha512-fvZogjpNZTJplUaP0vTSob+7w1T4tMfJAISrSiBVNTZahqSbAE3bWAzewF1vu1VWoGHlgBbHnZAak6G1LNT/1w==
+"@inappchat/react@1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@inappchat/react/-/react-1.0.0-beta.2.tgz#ab440ccd2dc6d02678415b490d13a2c2c486a48b"
+  integrity sha512-xPdx8c9y+O6ulf3OdYU6E+zFPctCkGGK9vdFnZm9EuaQgQq0NQYGeiLfLc8vmSGN33pfbNDdlJDO6dFy8jSuvg==
   dependencies:
     "@fluentui/react-icons" "^2.0.206"
-    "@inappchat/common" "0.0.1"
-    "@inappchat/sdk" "0.0.1"
+    "@inappchat/common" "^0.1.0"
+    "@inappchat/sdk" "1.0.0-beta.1"
     "@phosphor-icons/react" "^2.0.10"
     "@radix-ui/react-accordion" "^1.1.2"
     "@radix-ui/react-avatar" "^1.0.3"
@@ -1415,14 +1415,14 @@
     use-dark-mode "^2.3.1"
     usehooks-ts "^2.9.1"
 
-"@inappchat/sdk@0.0.1":
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@inappchat/sdk/-/sdk-1.0.0-beta.0.tgz#d87301a27282c0c5244aa468c892c5a94a9380b7"
-  integrity sha512-PI6HR9adm3pIWYlYJunMO96O4BVc+BVoG6qqnfflubz5EyxGwe2ixv4ZCvDtnK2t8NE11IaJO9kGooS9tzKOKA==
+"@inappchat/sdk@1.0.0-beta.1":
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@inappchat/sdk/-/sdk-1.0.0-beta.1.tgz#c00f7004fdf648f67a400ae49dd9a83e4c02dac0"
+  integrity sha512-X6F00NT2M65Vb6alP0D2gqvjD9b19jiNU+gQ/nwFAJztKae2+4pAcrImuC5R7tUcxu4n6oKghJHWdc58lmAnXg==
   dependencies:
     "@faker-js/faker" "^8.0.2"
     "@graphql-typed-document-node/core" "^3.2.0"
-    "@inappchat/common" "0.0.1"
+    "@inappchat/common" "^0.1.0"
     "@radix-ui/react-popover" "^1.0.6"
     date-fns "^2.30.0"
     graphql "^16.7.1"

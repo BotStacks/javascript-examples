@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { InAppChat, InAppChatUI, useChat } from '@inappchat/react';
-import 'node_modules/@inappchat/react/style.css';
+import { InAppChatProvider, InAppChatUI, useChat } from '@inappchat/react';
+import '@inappchat/react/dist/style.css';
 
 const API_KEY = import.meta.env.VITE_IAC_API_KEY || '';
 
@@ -46,12 +46,12 @@ const Chat = ({ userId, onLogout }) => {
   return <InAppChatUI onLogout={onLogout} />;
 };
 
-const LoginScreen = ({ onLogin }) => {
+const LoginScreen = ({ onLogin }: { onLogin: (userId: string) => void }) => {
   return (
     <div className="login-screen">
       <div className="login-screen-header">Log In as...</div>
       <div className="login-screen-users-continer">
-        {Object.keys(users).map((userId) => (
+        {Object.keys(users).map((userId: string) => (
           <div
             key={userId}
             className="login-screen-user-card"
@@ -66,17 +66,17 @@ const LoginScreen = ({ onLogin }) => {
 };
 
 export const App = () => {
-  const [userId, setUserId] = useState();
+  const [userId, setUserId] = useState('');
   if (API_KEY === '') {
     return <div>Please provide an api key!</div>;
   }
 
-  const handleLogin = (userId) => {
+  const handleLogin = (userId: string) => {
     setUserId(userId);
   };
 
   return (
-    <InAppChat apiKey={API_KEY}>
+    <InAppChatProvider apiKey={API_KEY}>
       {userId ? (
         <Chat
           userId={userId}
@@ -87,6 +87,6 @@ export const App = () => {
       ) : (
         <LoginScreen onLogin={handleLogin} />
       )}
-    </InAppChat>
+    </InAppChatProvider>
   );
 };

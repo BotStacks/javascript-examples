@@ -3,6 +3,7 @@ import { InAppChatProvider, InAppChatUI, useChat } from '@inappchat/react';
 import '@inappchat/react/dist/style.css';
 
 const API_KEY = import.meta.env.VITE_IAC_API_KEY || '';
+const ENV = import.meta.env.VITE_IAC_ENV || 'prod';
 
 const users = {
   '1': {
@@ -76,7 +77,7 @@ export const App = () => {
   };
 
   return (
-    <InAppChatProvider apiKey={API_KEY}>
+    <InAppChatProvider apiKey={API_KEY} env={ENV}>
       {userId ? (
         <Chat
           userId={userId}

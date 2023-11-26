@@ -1,6 +1,6 @@
-# InAppChat javascript sdk samples and examples
+# BotStacks chat javascript sdk samples and examples
 
-Before running any of these samples, you must obtain an API_KEY by creating an account at https://inappchat.io.
+Before running any of these samples, you must obtain an API_KEY by creating an account at https://dashboard.botstacks.ai.
 
 To run one of the samples, run
 

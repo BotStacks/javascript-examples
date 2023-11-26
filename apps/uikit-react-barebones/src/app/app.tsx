@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
-import { InAppChatProvider, InAppChatUI, useChat } from '@inappchat/react';
-import '@inappchat/react/dist/style.css';
+import {
+  BotStacksChatProvider,
+  BotStacksChatUI,
+  useChat,
+} from '@botstacks/chat-react';
+import '@botstacks/chat-react/dist/style.css';
 
-const API_KEY = import.meta.env.VITE_IAC_API_KEY || '';
-const ENV = import.meta.env.VITE_IAC_ENV || 'prod';
+const API_KEY = import.meta.env.VITE_API_KEY || '';
+const ENV = import.meta.env.VITE_ENV || 'prod';
 
 const users = {
   '1': {
@@ -44,7 +48,7 @@ const Chat = ({ userId, onLogout }) => {
     return <div>Logging in...</div>;
   }
 
-  return <InAppChatUI onLogout={onLogout} />;
+  return <BotStacksChatUI onLogout={onLogout} />;
 };
 
 const LoginScreen = ({ onLogin }: { onLogin: (userId: string) => void }) => {
@@ -77,7 +81,7 @@ export const App = () => {
   };
 
   return (
-    <InAppChatProvider apiKey={API_KEY} env={ENV}>
+    <BotStacksChatProvider apiKey={API_KEY} env={ENV}>
       {userId ? (
         <Chat
           userId={userId}
@@ -88,6 +92,6 @@ export const App = () => {
       ) : (
         <LoginScreen onLogin={handleLogin} />
       )}
-    </InAppChatProvider>
+    </BotStacksChatProvider>
   );
 };
